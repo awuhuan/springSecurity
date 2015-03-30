@@ -9,7 +9,7 @@ import java.util.Collection;
 
 @Service
 public class UserService {
-    @PreAuthorize("hasRole('admin')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public Collection<? extends GrantedAuthority> getAuthorities(UserDetails userDetails) {
         return userDetails.getAuthorities();
     }

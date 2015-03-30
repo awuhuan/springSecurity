@@ -19,7 +19,7 @@
                 <p>Hello, ${userDetails.username}! <a href="/j_spring_security_logout">Sign Out</a></p>
             </sec:authorize>
 
-            <sec:authorize access="hasRole('admin')">
+            <sec:authorize access="hasRole('ROLE_ADMIN')">
                 <p>
                     <a href="/admin">Admin page</a>
                 </p>

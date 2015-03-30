@@ -25,12 +25,12 @@ public class ApplicationController {
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
             UserDetails userDetails =
                     (UserDetails) authentication.getPrincipal();
-            map.addAttribute("userDetails", userDetails);
+             map.addAttribute("userDetails", userDetails);
         }
         return "index";
     }
 
-    @PreAuthorize("hasRole('admin')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String admin(ModelMap map) {
         UserDetails userDetails =
