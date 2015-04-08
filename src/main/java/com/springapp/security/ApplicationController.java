@@ -19,16 +19,16 @@ public class ApplicationController {
     @Autowired
     private UserService userService;
 
-//    @RequestMapping(value = "/", method = RequestMethod.GET)
-//    public String index(ModelMap map) {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(ModelMap map) {
 //        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 //        if (!(authentication instanceof AnonymousAuthenticationToken)) {
 //            UserDetails userDetails =
 //                    (UserDetails) authentication.getPrincipal();
 //            map.addAttribute("userDetails", userDetails);
 //        }
-//        return "login";
-//    }
+        return "login";
+    }
 
     @RequestMapping(value = "/check", method = RequestMethod.GET)
     public String check(ModelMap map) {
